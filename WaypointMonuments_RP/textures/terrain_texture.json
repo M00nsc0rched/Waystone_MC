@@ -1,0 +1,14 @@
+{
+  "resource_pack_name": "WaypointMonuments",
+  "texture_name": "atlas.terrain",
+  "padding": 8,
+  "num_mip_levels": 4,
+  "texture_data": {
+    "wp_waypoint": {
+      "textures": "textures/blocks/wp_waypoint"
+    },
+    "wp_waypoint_rim_red": {
+      "textures": "textures/blocks/wp_waypoint_rim_red"
+    }
+  }
+}

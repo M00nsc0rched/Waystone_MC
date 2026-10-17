@@ -1,0 +1,27 @@
+{
+  "format_version": "1.21.100",
+  "minecraft:block": {
+    "description": {
+      "identifier": "wp:building_planner",
+      "menu_category": { "category": "construction" },
+      "states": { "wp:heading": ["north", "east", "south", "west"] }
+    },
+    "components": {
+      "wp:building_planner_menu": {},
+      "minecraft:display_name": "Építész tervezőasztal",
+      "minecraft:geometry": "geometry.wp_building_planner",
+      "minecraft:material_instances": {
+        "*": { "texture": "lapis_block", "render_method": "opaque" },
+        "trim": { "texture": "gold_block", "render_method": "opaque" }
+      },
+      "minecraft:collision_box": { "origin": [-8, 0, -8], "size": [16, 12, 16] },
+      "minecraft:selection_box": { "origin": [-8, 0, -8], "size": [16, 12, 16] },
+      "minecraft:destructible_by_mining": { "seconds_to_destroy": 0.5 },
+      "minecraft:destructible_by_explosion": { "explosion_resistance": 1200 },
+      "minecraft:movable": { "movement_type": "immovable" },
+      "minecraft:loot": "loot_tables/blocks/building_planner.json",
+      "minecraft:map_color": "#164C9B",
+      "minecraft:light_emission": 4
+    }
+  }
+}

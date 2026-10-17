@@ -1,0 +1,26 @@
+{
+  "format_version": "1.21.40",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "wp:craft_waypoint"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      " C ",
+      " L ",
+      "SSS"
+    ],
+    "key": {
+      "C": { "item": "minecraft:clock" },
+      "L": { "item": "minecraft:lodestone" },
+      "S": { "item": "minecraft:stone" }
+    },
+    "unlock": [
+      { "item": "minecraft:lodestone" }
+    ],
+    "result": {
+      "item": "wp:waypoint",
+      "count": 1
+    }
+  }
+}

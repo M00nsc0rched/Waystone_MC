@@ -1,0 +1,13 @@
+{
+  "format_version": "1.21.100",
+  "minecraft:recipe_shapeless": {
+    "description": { "identifier": "wp:building_planner" },
+    "tags": ["crafting_table"],
+    "ingredients": [
+      { "item": "minecraft:book" },
+      { "item": "minecraft:paper" },
+      { "item": "minecraft:compass" }
+    ],
+    "result": { "item": "wp:building_planner", "count": 1 }
+  }
+}

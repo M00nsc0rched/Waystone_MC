@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "wp:black_wings",
+      "materials": { "default": "entity_alphatest" },
+      "textures": { "default": "textures/entity/black_wings" },
+      "geometry": { "default": "geometry.wp.black_wings" },
+      "animations": { "pose": "animation.wp.black_wings.pose" },
+      "scripts": {
+        "initialize": ["variable.wing_open = 0.0;"],
+        "pre_animation": [
+          "variable.wing_open = math.lerp(variable.wing_open, query.property('wp:flying') ? 1.0 : 0.0, math.min(1.0, query.delta_time * 8.0));"
+        ],
+        "animate": ["pose"]
+      },
+      "render_controllers": ["controller.render.wp.black_wings"]
+    }
+  }
+}

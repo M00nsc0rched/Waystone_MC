@@ -1,0 +1,10 @@
+# Build and runtime leftovers
+*.mcaddon.building
+node_modules/
+__pycache__/
+*.pyc
+
+# Desktop metadata
+.DS_Store
+Thumbs.db
+desktop.ini

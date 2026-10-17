@@ -1,0 +1,96 @@
+{
+  "format_version": "1.21.100",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "wp:village_guard",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "wp:melee": {
+        "minecraft:attack": { "damage": [4, 6] },
+        "minecraft:behavior.melee_box_attack": {
+          "priority": 4,
+          "track_target": true
+        }
+      },
+      "wp:ranged": {
+        "minecraft:attack": { "damage": [3, 4] },
+        "minecraft:shooter": { "def": "minecraft:arrow" },
+        "minecraft:behavior.ranged_attack": {
+          "priority": 4,
+          "attack_interval_min": 1,
+          "attack_interval_max": 2,
+          "attack_radius": 15
+        }
+      }
+    },
+    "components": {
+      "minecraft:type_family": { "family": ["wp_guard", "village_guard", "mob"] },
+      "minecraft:collision_box": { "width": 0.6, "height": 1.95 },
+      "minecraft:health": { "value": 26, "max": 26 },
+      "minecraft:movement": { "value": 0.32 },
+      "minecraft:knockback_resistance": { "value": 0.5 },
+      "minecraft:follow_range": { "value": 48, "max": 48 },
+      "minecraft:attack": { "damage": [4, 6] },
+      "minecraft:physics": {},
+      "minecraft:pushable": { "is_pushable": true, "is_pushable_by_piston": true },
+      "minecraft:jump.static": {},
+      "minecraft:can_climb": {},
+      "minecraft:movement.basic": {},
+      "minecraft:navigation.walk": {
+        "can_path_over_water": false,
+        "avoid_water": true,
+        "can_open_doors": true,
+        "can_pass_doors": true
+      },
+      "minecraft:annotation.open_door": {},
+      "minecraft:breathable": { "total_supply": 15, "suffocate_time": 0 },
+      "minecraft:nameable": {},
+      "minecraft:persistent": {},
+      "minecraft:is_hidden_when_invisible": {},
+      "minecraft:conditional_bandwidth_optimization": {},
+      "minecraft:behavior.float": { "priority": 0 },
+      "minecraft:behavior.hurt_by_target": {
+        "priority": 1,
+        "entity_types": [
+          {
+            "filters": { "test": "is_family", "subject": "other", "operator": "!=", "value": "wp_guard" }
+          }
+        ]
+      },
+      "minecraft:behavior.nearest_attackable_target": {
+        "priority": 2,
+        "must_see": true,
+        "must_reach": false,
+        "reselect_targets": true,
+        "within_radius": 32,
+        "scan_interval": 10,
+        "entity_types": [
+          {
+            "filters": { "test": "is_family", "subject": "other", "value": "monster" },
+            "max_dist": 24,
+            "must_see": true
+          }
+        ]
+      },
+      "minecraft:behavior.random_stroll": { "priority": 6, "speed_multiplier": 0.8 },
+      "minecraft:behavior.look_at_player": { "priority": 7, "look_distance": 8, "probability": 0.02 },
+      "minecraft:behavior.random_look_around": { "priority": 8 }
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "add": { "component_groups": ["wp:melee"] }
+      },
+      "wp:set_melee": {
+        "remove": { "component_groups": ["wp:ranged"] },
+        "add": { "component_groups": ["wp:melee"] }
+      },
+      "wp:set_ranged": {
+        "remove": { "component_groups": ["wp:melee"] },
+        "add": { "component_groups": ["wp:ranged"] }
+      }
+    }
+  }
+}

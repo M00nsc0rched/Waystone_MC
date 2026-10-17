@@ -1,0 +1,24 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.wp.black_wings.pose": {
+      "loop": true,
+      "bones": {
+        "right_wing": {
+          "rotation": [
+            "12.0 - variable.wing_open * 25.0",
+            "-12.0 + variable.wing_open * 12.0",
+            "8.0 + variable.wing_open * (57.0 + math.sin(query.life_time * 120.0) * 1.5)"
+          ]
+        },
+        "left_wing": {
+          "rotation": [
+            "12.0 - variable.wing_open * 25.0",
+            "12.0 - variable.wing_open * 12.0",
+            "-8.0 - variable.wing_open * (57.0 + math.sin(query.life_time * 120.0) * 1.5)"
+          ]
+        }
+      }
+    }
+  }
+}

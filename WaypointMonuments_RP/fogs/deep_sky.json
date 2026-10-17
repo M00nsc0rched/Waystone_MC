@@ -1,0 +1,16 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:fog_settings": {
+    "description": {
+      "identifier": "wp:deep_sky"
+    },
+    "distance": {
+      "air": {
+        "fog_start": 24,
+        "fog_end": 96,
+        "fog_color": "#070A16",
+        "render_distance_type": "fixed"
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Waypoint Monuments [RP]",
+    "description": "Models, textures and sounds for the Waypoint Monuments add-on.",
+    "uuid": "d7aeff3a-9c1e-4e92-bead-debb28cc1d64",
+    "version": [
+      1,
+      7,
+      0
+    ],
+    "min_engine_version": [
+      1,
+      26,
+      20
+    ]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "c8ff6257-d230-4e2b-b3bd-e2d296af0fea",
+      "version": [
+        1,
+        7,
+        0
+      ]
+    }
+  ]
+}

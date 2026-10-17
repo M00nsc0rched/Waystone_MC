@@ -1,0 +1,28 @@
+{
+  "format_version": "1.21.100",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "wp:black_wings",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false,
+      "properties": {
+        "wp:flying": { "type": "bool", "default": false, "client_sync": true }
+      }
+    },
+    "components": {
+      "minecraft:type_family": { "family": ["wp_cosmetic"] },
+      "minecraft:collision_box": { "width": 0, "height": 0 },
+      "minecraft:custom_hit_test": {
+        "hitboxes": [{ "width": 0, "height": 0, "pivot": [0, 0, 0] }]
+      },
+      "minecraft:physics": { "has_gravity": false, "has_collision": false },
+      "minecraft:pushable": { "is_pushable": false, "is_pushable_by_piston": false },
+      "minecraft:cannot_be_attacked": {},
+      "minecraft:damage_sensor": { "triggers": [{ "cause": "all", "deals_damage": false }] },
+      "minecraft:fire_immune": {},
+      "minecraft:transient": {},
+      "minecraft:body_rotation_always_follows_head": {}
+    }
+  }
+}
